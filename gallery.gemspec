@@ -6,8 +6,8 @@ Gem::Specification.new do |spec|
   spec.version       = VERSION
   spec.authors       = ["daniel"]
   spec.email         = ["xzdasx@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{easy implementation for a scrollable gallery in rubymotion}
+  spec.summary       = %q{}
   spec.homepage      = ""
   spec.license       = ""
 
