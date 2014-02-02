@@ -14,9 +14,16 @@ class UIScrollGallery < UIScrollView
   end
 
   def add_images(images)
-    images.each_with_index do |i, x| 
-      image = UIImageView.alloc.initWithFrame([[UIScreen.mainScreen.bounds.size.width * x, 0], [UIScreen.mainScreen.bounds.size.width, 290]])
-      image.image = UIImage.imageNamed(i)
+    images.each_with_index do |i, x|
+      if i.is_a?(String)
+        image = UIImageView.alloc.init
+        image.image = UIImage.imageNamed(i)
+      elsif i.is_a?(UIImage)
+        image = UIImageView.alloc.init
+        image.image = i
+      elsif i.is_a?(UIImageView)
+        image = i
+      end
       self.addSubview(image) 
     end
   end
