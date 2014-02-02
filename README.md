@@ -58,6 +58,10 @@ class GalleryViewController < UIViewController
   end
 end
 ```
+
+## Author
+  hugoerg56 made the first implementation
+ 
 ## Contributing
 
 1. Fork it
