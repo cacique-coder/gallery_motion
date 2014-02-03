@@ -14,7 +14,6 @@ class UIScrollGallery < UIScrollView
   end
 
   def add_images(images)
-    puts "frame = #{frame.to_a}"
     size = frame.size
     images.each_with_index do |img, i|
       if img.is_a?(String)
