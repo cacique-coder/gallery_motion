@@ -1,7 +1,7 @@
 class UIScrollGallery < UIScrollView
   def initWithNumImages(num_images,frame: frame)
     scrollView = UIScrollGallery.alloc.init
-    scrollView.frame = frame
+    frame = frame
     scrollView.pagingEnabled = true;
     scrollView.contentSize = CGSizeMake(scrollView.frame.size.width * num_images, scrollView.frame.size.height);
     scrollView.showsHorizontalScrollIndicator = true
@@ -14,8 +14,8 @@ class UIScrollGallery < UIScrollView
   end
 
   def add_images(images)
-    size = scrollView.frame.size
-    position = scrollView.frame.position
+    size = frame.size
+    position = frame.position
     images.each_with_index do |i, x|
       if i.is_a?(String)
         image = UIImageView.alloc.init
