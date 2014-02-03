@@ -14,6 +14,8 @@ class UIScrollGallery < UIScrollView
   end
 
   def add_images(images)
+    size = scrollView.frame.size
+    position = scrollView.frame.position
     images.each_with_index do |i, x|
       if i.is_a?(String)
         image = UIImageView.alloc.init
@@ -24,6 +26,8 @@ class UIScrollGallery < UIScrollView
       elsif i.is_a?(UIImageView)
         image = i
       end
+      image.size = size
+      image.position = [position.width*(1 + i),position.height]
       self.addSubview(image) 
     end
   end
